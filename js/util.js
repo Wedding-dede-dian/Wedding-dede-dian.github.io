@@ -8,7 +8,10 @@ import { bootstrap } from './bootstrap.js';
 import { request, HTTP_GET } from './request.js';
 
 export const util = (() => {
-
+setTimeout(function() {
+        $('#scrolldown').fadeOut('fast');
+    }, 8000); // <-- time in milliseconds
+    
     const opacity = (id, speed = 0.01) => {
         const element = document.getElementById(id);
         let op = parseInt(element.style.opacity);
