@@ -88,8 +88,8 @@ export const theme = (() => {
         });
     };
 
-     const isDarkMode = (onDark = null, onLight = null) => {
-        const status = theme.get('active') === THEME_LIGHT;
+    const isDarkMode = (onDark = null, onLight = null) => {
+        const status = theme.get('active') === THEME_DARK;
 
         if (onDark && onLight) {
             return status ? onDark : onLight;
@@ -138,7 +138,7 @@ export const theme = (() => {
     };
 
     const showButtonChangeTheme = () => {
-        document.getElementById('button-theme').style.display = 'block';
+        document.getElementById('button-theme').style.display = 'none';
     };
 
     return {
